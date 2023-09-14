@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MOSHED-2023-9-12-13-21-9.jpg-9ef7a16a3fa59c82527a7bf3671da9fd.stex"
+path="res://.import/icon.png-7a8940d65f0e76a5c2bcd2301e7bae20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MOSHED-2023-9-12-13-21-9.jpg"
-dest_files=[ "res://.import/MOSHED-2023-9-12-13-21-9.jpg-9ef7a16a3fa59c82527a7bf3671da9fd.stex" ]
+source_file="res://Random Images/icon.png"
+dest_files=[ "res://.import/icon.png-7a8940d65f0e76a5c2bcd2301e7bae20.stex" ]
 
 [params]
 

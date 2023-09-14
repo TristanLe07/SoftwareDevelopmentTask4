@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Glitched.jpg" type="Texture" id=1]
+[ext_resource path="res://Blue Background.png" type="Texture" id=2]
+[ext_resource path="res://Main Menu.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Glitch",
+"speed": 5.0
+} ]
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 505.51, 297.072 )
+scale = Vector2( 1.02893, 1.03002 )
+frames = SubResource( 2 )
+animation = "Glitch"
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
