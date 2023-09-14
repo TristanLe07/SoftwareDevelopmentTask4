@@ -1,6 +1,6 @@
 extends KinematicBody2D
  
-const MOVE_SPEED = 300
+var MOVE_SPEED = 300
 var bullet_speed = 2000
 var bullet = preload("res://Player/bullet.tscn")
 
@@ -12,9 +12,9 @@ func _ready():
  
 func _physics_process(delta):
 	var move_vec = Vector2()
-	if Input.is_action_pressed("forward"):
+	if Input.is_action_pressed("up"):
 		move_vec.y -= 1
-	if Input.is_action_pressed("backward"):
+	if Input.is_action_pressed("down"):
 		move_vec.y += 1
 	if Input.is_action_pressed("left"):
 		move_vec.x -= 1

@@ -9,21 +9,21 @@
 [ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=8]
 [ext_resource path="res://Random Images/Glitched.jpg" type="Texture" id=9]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Glitch",
-"speed": 5.0
+"speed": 10.0
 } ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 50
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 100
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
@@ -38,60 +38,60 @@ __meta__ = {
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 504, 296 )
-scale = Vector2( 1.02893, 1.03002 )
-frames = SubResource( 2 )
+position = Vector2( 512, 300 )
+scale = Vector2( 1.01386, 1.0274 )
+frames = SubResource( 1 )
 animation = "Glitch"
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 392.0
-margin_top = 168.0
-margin_right = 639.0
-margin_bottom = 267.0
+margin_left = 320.0
+margin_top = 200.0
+margin_right = 704.0
+margin_bottom = 296.0
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ControlsButton" type="Button" parent="."]
-margin_left = 368.0
-margin_top = 304.0
-margin_right = 656.0
-margin_bottom = 403.0
+margin_left = 320.0
+margin_top = 320.0
+margin_right = 704.0
+margin_bottom = 416.0
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
-text = "Controls"
+custom_fonts/font = SubResource( 2 )
+text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CreditsButton" type="Button" parent="."]
-margin_left = 368.0
-margin_top = 448.0
-margin_right = 656.0
-margin_bottom = 547.0
+margin_left = 320.0
+margin_top = 440.0
+margin_right = 704.0
+margin_bottom = 536.0
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 184.0
-margin_top = 40.0
-margin_right = 892.0
-margin_bottom = 110.0
-custom_fonts/font = SubResource( 4 )
+margin_right = 1024.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 3 )
 text = "DrComputer"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
