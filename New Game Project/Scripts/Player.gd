@@ -31,6 +31,7 @@ func _physics_process(delta):
 		var coll = raycast.get_collider()
 		if raycast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
+			global.score += 1
 
 func fire():
 	var bullet_instance = bullet.instance()
@@ -42,3 +43,12 @@ func fire():
 
 func kill():
 	get_tree().reload_current_scene()
+	get_parent().queue_free()
+	global.score == 0
+
+func delete() -> void:
+	  queue_free()
+
+func _on_Timer_timeout():
+	get_tree().call_group("fire", "delete")   
+
