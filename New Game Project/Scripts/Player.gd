@@ -43,4 +43,12 @@ func fire():
 
 func kill():
 	get_tree().reload_current_scene()
+	get_parent().queue_free()
 	global.score == 0
+
+func delete() -> void:
+	  queue_free()
+
+func _on_Timer_timeout():
+	get_tree().call_group("fire", "delete")   
+
