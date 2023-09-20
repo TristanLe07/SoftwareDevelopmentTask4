@@ -8,6 +8,7 @@ var player = null
  
 func _ready():
 	add_to_group("zombies")
+	$AnimatedSprite.play()
  
 func _physics_process(delta):
 	if player == null:
@@ -24,6 +25,6 @@ func _physics_process(delta):
  
 func kill():
 	queue_free()
-
+ 
 func set_player(p):
 	player = p

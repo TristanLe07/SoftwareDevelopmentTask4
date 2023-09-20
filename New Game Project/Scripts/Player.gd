@@ -31,7 +31,7 @@ func _physics_process(delta):
 		var coll = raycast.get_collider()
 		if raycast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
-			global.score += 1
+			global.score += 1 
 
 func fire():
 	var bullet_instance = bullet.instance()
@@ -39,12 +39,12 @@ func fire():
 	bullet_instance.rotation_degrees = rotation_degrees
 	bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child",bullet_instance)
-		 
+
 
 func kill():
-	get_tree().reload_current_scene()
-	get_parent().queue_free()
 	global.score == 0
+	queue_free()
+	get_tree().reload_current_scene()
 
 func delete() -> void:
 	  queue_free()
