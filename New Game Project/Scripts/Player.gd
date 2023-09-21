@@ -1,5 +1,5 @@
 extends KinematicBody2D
- 
+
 var MOVE_SPEED = 300
 var bullet_speed = 2000
 var bullet = preload("res://Player/bullet.tscn")
@@ -32,6 +32,8 @@ func _physics_process(delta):
 		if raycast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
 			global.score += 1 
+	if global.score == 5:
+		get_tree().change_scene("res://Levels/Main Menu.tscn")
 
 func fire():
 	var bullet_instance = bullet.instance()

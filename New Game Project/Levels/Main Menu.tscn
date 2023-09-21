@@ -33,9 +33,6 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 512, 300 )
@@ -48,10 +45,10 @@ margin_left = 320.0
 margin_top = 200.0
 margin_right = 704.0
 margin_bottom = 296.0
+custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 2 )
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,10 +59,10 @@ margin_left = 320.0
 margin_top = 320.0
 margin_right = 704.0
 margin_bottom = 416.0
+custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 2 )
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,10 +73,10 @@ margin_left = 320.0
 margin_top = 440.0
 margin_right = 704.0
 margin_bottom = 536.0
+custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 2 )
 text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -95,5 +92,5 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
