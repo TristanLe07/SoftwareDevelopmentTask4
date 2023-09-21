@@ -1,0 +1,310 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Buttons/ButtonPressed.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/Buttons/ButtonNormal.tres" type="StyleBox" id=3]
+[ext_resource path="res://assets/Buttons/ButtonHover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Levels/Settings.gd" type="Script" id=5]
+[ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlusSC-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=8]
+[ext_resource path="res://Random Images/Glitched.jpg" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Glitch",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 75
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.564706, 0.603922, 0.917647, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="AnimatedSprite" parent="."]
+position = Vector2( 504, 296 )
+scale = Vector2( 1.02893, 1.03002 )
+frames = SubResource( 1 )
+animation = "Glitch"
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 8.0
+margin_top = 504.0
+margin_right = 220.0
+margin_bottom = 583.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 2 )
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 312.0
+margin_top = 16.0
+margin_right = 720.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 3 )
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W" type="Panel" parent="Buttons"]
+margin_left = 304.0
+margin_top = 128.0
+margin_right = 368.0
+margin_bottom = 192.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W Text" type="Label" parent="Buttons"]
+margin_left = 316.135
+margin_top = 123.264
+margin_right = 372.135
+margin_bottom = 194.264
+custom_fonts/font = SubResource( 5 )
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="Panel" parent="Buttons"]
+margin_left = 376.0
+margin_top = 128.0
+margin_right = 480.0
+margin_bottom = 192.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up Text" type="Label" parent="Buttons"]
+margin_left = 392.0
+margin_top = 176.0
+margin_right = 460.0
+margin_bottom = 247.0
+rect_rotation = 270.0
+custom_fonts/font = SubResource( 5 )
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="Panel" parent="Buttons"]
+margin_left = 304.0
+margin_top = 204.736
+margin_right = 368.0
+margin_bottom = 268.736
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A Text" type="Label" parent="Buttons"]
+margin_left = 316.135
+margin_top = 200.0
+margin_right = 372.135
+margin_bottom = 271.0
+custom_fonts/font = SubResource( 5 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="<" type="Panel" parent="Buttons"]
+margin_left = 376.0
+margin_top = 204.736
+margin_right = 480.0
+margin_bottom = 268.736
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="< Text" type="Label" parent="Buttons"]
+margin_left = 408.0
+margin_top = 200.0
+margin_right = 444.0
+margin_bottom = 271.0
+custom_fonts/font = SubResource( 5 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="W2" type="Panel" parent="Buttons"]
+margin_left = 304.0
+margin_top = 284.736
+margin_right = 368.0
+margin_bottom = 348.736
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W Text2" type="Label" parent="Buttons"]
+margin_left = 316.135
+margin_top = 280.0
+margin_right = 372.135
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 5 )
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up2" type="Panel" parent="Buttons"]
+margin_left = 376.0
+margin_top = 284.736
+margin_right = 480.0
+margin_bottom = 348.736
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up Text2" type="Label" parent="Buttons"]
+margin_left = 416.0
+margin_top = 280.0
+margin_right = 448.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 5 )
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A2" type="Panel" parent="Buttons"]
+margin_left = 304.0
+margin_top = 361.471
+margin_right = 368.0
+margin_bottom = 425.471
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A Text2" type="Label" parent="Buttons"]
+margin_left = 316.135
+margin_top = 356.736
+margin_right = 372.135
+margin_bottom = 427.736
+custom_fonts/font = SubResource( 5 )
+text = "S"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="<2" type="Panel" parent="Buttons"]
+margin_left = 376.0
+margin_top = 361.471
+margin_right = 480.0
+margin_bottom = 425.471
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="< Text2" type="Label" parent="Buttons"]
+anchor_left = 1.4
+anchor_top = 0.481612
+anchor_right = 1.4
+anchor_bottom = 0.481612
+margin_left = 408.0
+margin_top = 356.736
+margin_right = 444.0
+margin_bottom = 427.736
+rect_rotation = 90.0
+custom_fonts/font = SubResource( 5 )
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="=" type="Label" parent="."]
+margin_left = 496.0
+margin_top = 123.264
+margin_right = 564.0
+margin_bottom = 194.264
+custom_fonts/font = SubResource( 5 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="= " type="Label" parent="."]
+margin_left = 496.0
+margin_top = 200.0
+margin_right = 564.0
+margin_bottom = 271.0
+custom_fonts/font = SubResource( 5 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="=  " type="Label" parent="."]
+margin_left = 496.0
+margin_top = 280.0
+margin_right = 564.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 5 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="=   " type="Label" parent="."]
+margin_left = 496.0
+margin_top = 356.735
+margin_right = 564.0
+margin_bottom = 427.735
+custom_fonts/font = SubResource( 5 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="Background" to="." method="_on_Sprite_animation_finished"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
