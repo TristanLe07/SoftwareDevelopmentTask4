@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-7a8940d65f0e76a5c2bcd2301e7bae20.stex"
+path="res://.import/Blob1.png-dd316467934e409503deb5cc35065a86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Random Images/icon.png"
-dest_files=[ "res://.import/icon.png-7a8940d65f0e76a5c2bcd2301e7bae20.stex" ]
+source_file="res://assets/GroupThinsg/Josh Blob/Blob1.png"
+dest_files=[ "res://.import/Blob1.png-dd316467934e409503deb5cc35065a86.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

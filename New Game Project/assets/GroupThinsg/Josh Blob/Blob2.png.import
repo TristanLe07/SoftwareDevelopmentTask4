@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pixil-frame-0 (1).png-160dd9969d7e45d14d604c370b40e019.stex"
+path="res://.import/Blob2.png-6abbfafe63c206311fafc0d2d3ef1676.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0 (1).png"
-dest_files=[ "res://.import/pixil-frame-0 (1).png-160dd9969d7e45d14d604c370b40e019.stex" ]
+source_file="res://assets/GroupThinsg/Josh Blob/Blob2.png"
+dest_files=[ "res://.import/Blob2.png-6abbfafe63c206311fafc0d2d3ef1676.stex" ]
 
 [params]
 
