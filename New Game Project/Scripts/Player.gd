@@ -7,9 +7,10 @@ var bullet = preload("res://Player/bullet.tscn")
 onready var raycast = $RayCast2D
  
 func _ready():
-	yield(get_tree(), "idle_frame")
+	global.score = 0
 	get_tree().call_group("zombies", "set_player", self)
  
+
 func _physics_process(delta):
 	var move_vec = Vector2()
 	if Input.is_action_pressed("up"):
@@ -33,7 +34,7 @@ func _physics_process(delta):
 			coll.kill()
 			global.score += 1 
 	if global.score == 5:
-		get_tree().change_scene("res://Levels/Main Menu.tscn")
+		get_tree().change_scene("res://Menus/Main Menu.tscn")
 
 func fire():
 	var bullet_instance = bullet.instance()
@@ -44,9 +45,9 @@ func fire():
 
 
 func kill():
-	global.score == 0
 	queue_free()
 	get_tree().reload_current_scene()
+	global.score = 0
 
 func delete() -> void:
 	  queue_free()

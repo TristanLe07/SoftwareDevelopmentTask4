@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Player/Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/Zombie.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tilemap/block.png" type="Texture" id=3]
 [ext_resource path="res://assets/tilemap/block2.png" type="Texture" id=4]
 [ext_resource path="res://Player/Score.tscn" type="PackedScene" id=5]
@@ -148,6 +148,7 @@ limit_left = -500
 limit_top = -500
 limit_right = 500
 limit_bottom = 500
+smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
