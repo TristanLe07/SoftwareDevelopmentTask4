@@ -4,14 +4,16 @@
 [ext_resource path="res://Enemy/Zombie.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 24 )
+extents = Vector2( 16, 16 )
 
 [node name="Zombie" type="KinematicBody2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, 4.76837e-07 )
-scale = Vector2( 2.82353, 3 )
+scale = Vector2( 1.88235, 2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

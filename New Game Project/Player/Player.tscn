@@ -4,24 +4,23 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.5845, 20.9888 )
+extents = Vector2( 12, 12.1507 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 12.0305, -5.18494 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 16, -2.38419e-07 )
-scale = Vector2( 3.42857, 3.5 )
+position = Vector2( -1.18921, 4 )
+scale = Vector2( 2.39738, 2.41939 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.568027, -0.0133543 )
+position = Vector2( -12, 3.91127 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, 5.26134 )
 enabled = true
 cast_to = Vector2( 2000, 0 )
 
