@@ -1,5 +1,5 @@
 extends KinematicBody2D
- 
+
 var MOVE_SPEED = 300
 var bullet_speed = 2000
 var bullet = preload("res://Player/bullet.tscn")
@@ -7,9 +7,10 @@ var bullet = preload("res://Player/bullet.tscn")
 onready var raycast = $RayCast2D
  
 func _ready():
-	yield(get_tree(), "idle_frame")
+	global.score = 0
 	get_tree().call_group("zombies", "set_player", self)
  
+
 func _physics_process(delta):
 	var move_vec = Vector2()
 	if Input.is_action_pressed("up"):
@@ -31,7 +32,9 @@ func _physics_process(delta):
 		var coll = raycast.get_collider()
 		if raycast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
-			global.score += 1
+			global.score += 1 
+	if global.score == 10:
+		get_tree().change_scene("res://Menus/WinScreen.tscn")
 
 func fire():
 	var bullet_instance = bullet.instance()
@@ -39,8 +42,16 @@ func fire():
 	bullet_instance.rotation_degrees = rotation_degrees
 	bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child",bullet_instance)
-		 
+
 
 func kill():
-	get_tree().reload_current_scene()
-	global.score == 0
+	queue_free()
+	get_tree().change_scene("res://Menus/LostScreen.tscn")
+	global.score = 0
+
+func delete() -> void:
+	  queue_free()
+
+func _on_Timer_timeout():
+	get_tree().call_group("fire", "delete")   
+
