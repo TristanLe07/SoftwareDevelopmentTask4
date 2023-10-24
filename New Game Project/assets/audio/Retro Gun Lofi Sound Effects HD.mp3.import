@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Retro Gun Lofi Sound Effects HD.mp3-7a1d3e274984efee44bdef55b030d083.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Retro Gun Lofi Sound Effects HD.mp3"
+dest_files=[ "res://.import/Retro Gun Lofi Sound Effects HD.mp3-7a1d3e274984efee44bdef55b030d083.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -37,6 +37,7 @@ func _physics_process(delta):
 		get_tree().change_scene("res://Menus/WinScreen.tscn")
 
 func fire():
+	$AudioStreamPlayer2D.play()
 	var bullet_instance = bullet.instance()
 	bullet_instance.position = get_global_position()
 	bullet_instance.rotation_degrees = rotation_degrees
