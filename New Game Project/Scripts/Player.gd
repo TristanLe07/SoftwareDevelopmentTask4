@@ -32,7 +32,6 @@ func _physics_process(delta):
 		var coll = raycast.get_collider()
 		if raycast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
-			global.score += 1 
 	if global.score == 10:
 		get_tree().change_scene("res://Menus/WinScreen.tscn")
 

@@ -1,14 +1,14 @@
 extends KinematicBody2D
  
-const MOVE_SPEED = 350
+const MOVE_SPEED = 200
  
 onready var raycast = $RayCast2D
  
 var player = null
- 
+export var health : int = 3 
+
 func _ready():
-	add_to_group("zombies")
-	$AnimatedSprite.play()
+	add_to_group("zombie")
  
 func _physics_process(delta):
 	if player == null:
@@ -24,7 +24,16 @@ func _physics_process(delta):
 			coll.kill()
  
 func kill():
-	queue_free()
- 
+	health -= 1
+	$ProgressBar.value = health
+	if health == 0:
+		queue_free()
+		global.score += 1 
+	
+
 func set_player(p):
 	player = p
+
+
+func _on_ProgressBar_changed():
+	pass # Replace with function body.

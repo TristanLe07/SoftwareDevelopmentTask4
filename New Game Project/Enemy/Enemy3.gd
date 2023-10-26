@@ -1,11 +1,12 @@
 extends KinematicBody2D
  
-const MOVE_SPEED = 300
+const MOVE_SPEED = 200
  
 onready var raycast = $RayCast2D
  
 var player = null
- 
+export var health : int = 3 
+
 func _ready():
 	add_to_group("zombies")
  
@@ -23,7 +24,11 @@ func _physics_process(delta):
 			coll.kill()
  
 func kill():
-	queue_free()
+	health -= 1
+	if health == 0:
+		queue_free()
+		global.score += 1 
+	
 
 func set_player(p):
 	player = p

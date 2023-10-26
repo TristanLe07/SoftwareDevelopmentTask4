@@ -146,18 +146,18 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 830.0
-margin_bottom = 529.0
+margin_bottom = 605.0
 theme = SubResource( 13 )
 
 [node name="BodyText" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_right = 830.0
-margin_bottom = 529.0
+margin_bottom = 605.0
 rect_min_size = Vector2( 830, 0 )
 custom_fonts/font = SubResource( 2 )
 text = "This game was created for 10.1 Software Development class.
 
 Developer:
-Tristan Le, Jayden Falcone
+Tristan Le, Jayden Falcone, Joshua Paiva
 
 Sprites:
 Jayden Falcone, Joshua Paiva, Lachlan Fowler
@@ -165,6 +165,8 @@ Jayden Falcone, Joshua Paiva, Lachlan Fowler
 Level Designers:
 Tristan Le, Jayden Falcone, Joshua Paiva, Lachlan Fowler
 
+Person who just played games:
+Lachlan Fowler
 "
 align = 1
 valign = 3
