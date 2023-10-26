@@ -19,3 +19,7 @@ func _on_Level4_pressed():
 
 func _on_Level5_pressed():
 	get_tree().change_scene("res://Levels/Level5.tscn")
+
+
+func _on_Level6_pressed():
+	get_tree().change_scene("res://Levels/Level6.tscn")

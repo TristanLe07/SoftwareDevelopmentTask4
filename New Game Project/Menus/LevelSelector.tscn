@@ -8,12 +8,12 @@
 [ext_resource path="res://Scripts/LevelSelecter.gd" type="Script" id=6]
 [ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 75
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 128
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -22,6 +22,9 @@ font_data = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BlueBackground" type="Sprite" parent="."]
 position = Vector2( 512, 300 )
@@ -33,10 +36,10 @@ margin_left = 128.0
 margin_top = 192.0
 margin_right = 256.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "1"
 
 [node name="Level2" type="Button" parent="."]
@@ -44,10 +47,10 @@ margin_left = 448.0
 margin_top = 192.0
 margin_right = 576.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "2"
 
 [node name="Level3" type="Button" parent="."]
@@ -55,44 +58,61 @@ margin_left = 768.0
 margin_top = 192.0
 margin_right = 896.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "3"
 
 [node name="Level4" type="Button" parent="."]
-margin_left = 288.0
+margin_left = 128.0
 margin_top = 384.0
-margin_right = 416.0
+margin_right = 256.0
 margin_bottom = 512.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "4"
 
 [node name="Level5" type="Button" parent="."]
-margin_left = 608.0
+margin_left = 448.0
 margin_top = 384.0
-margin_right = 736.0
+margin_right = 576.0
 margin_bottom = 512.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level6" type="Button" parent="."]
+margin_left = 768.0
+margin_top = 384.0
+margin_right = 896.0
+margin_bottom = 512.0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 192.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Levels"
 align = 1
 valign = 1
-
 [connection signal="pressed" from="Level1" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed"]
 [connection signal="pressed" from="Level4" to="." method="_on_Level4_pressed"]
 [connection signal="pressed" from="Level5" to="." method="_on_Level5_pressed"]
+[connection signal="pressed" from="Level6" to="." method="_on_Level6_pressed"]

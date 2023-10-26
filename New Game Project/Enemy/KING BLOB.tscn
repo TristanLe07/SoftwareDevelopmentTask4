@@ -9,15 +9,34 @@ height = 0.0
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
 
 [node name="KINGBLOB" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -1.90735e-06, 1.90735e-06 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 2 )
 frame = 6
@@ -32,7 +51,7 @@ cast_to = Vector2( 50, 0 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = -24.0
-margin_top = -48.0
+margin_top = -40.0
 margin_right = 24.0
 margin_bottom = -32.0
 custom_styles/fg = SubResource( 2 )
@@ -40,3 +59,6 @@ custom_styles/bg = SubResource( 3 )
 step = 1.0
 value = 100.0
 percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
