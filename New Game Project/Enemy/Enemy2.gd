@@ -6,9 +6,10 @@ onready var raycast = $RayCast2D
  
 var player = null
 export var health : int = 3 
+export var max_health : int = 3
 
 func _ready():
-	add_to_group("zombie")
+	add_to_group("zombies")
  
 func _physics_process(delta):
 	if player == null:
@@ -26,6 +27,7 @@ func _physics_process(delta):
 func kill():
 	health -= 1
 	$ProgressBar.value = health
+	$ProgressBar.max_value = max_health
 	if health == 0:
 		queue_free()
 		global.score += 1 
@@ -33,7 +35,3 @@ func kill():
 
 func set_player(p):
 	player = p
-
-
-func _on_ProgressBar_changed():
-	pass # Replace with function body.
