@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/Buttons/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/Buttons/ButtonHover.tres" type="StyleBox" id=2]
@@ -6,16 +6,10 @@
 [ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlusSC-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=6]
-[ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=7]
-[ext_resource path="res://Random Images/Glitched.jpg" type="Texture" id=8]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Glitch",
-"speed": 5.0
-} ]
+[ext_resource path="res://assets/character/player (2).png" type="Texture" id=7]
+[ext_resource path="res://assets/character/Enemy (2).png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Menucharacter.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Enemy(2)2.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
@@ -32,11 +26,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 512, 300 )
-scale = Vector2( 1.01386, 1.0274 )
-frames = SubResource( 1 )
-animation = "Glitch"
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1032.0
+margin_bottom = 608.0
+color = Color( 0.215686, 0.741176, 0.741176, 1 )
 
 [node name="PlayButton" type="Button" parent="."]
 margin_left = 320.0
@@ -78,6 +71,30 @@ custom_fonts/font = SubResource( 3 )
 text = "DrComputer"
 align = 1
 valign = 1
+
+[node name="Player(2)" type="Sprite" parent="."]
+position = Vector2( 144, 496 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 7 )
+script = ExtResource( 9 )
+
+[node name="Enemy(2)" type="Sprite" parent="."]
+position = Vector2( 832, 504 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+script = ExtResource( 10 )
+
+[node name="Enemy(2)2" type="Sprite" parent="."]
+position = Vector2( 176, 224 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+script = ExtResource( 10 )
+
+[node name="Enemy(2)3" type="Sprite" parent="."]
+position = Vector2( 936, 208 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="ControlsButton" to="." method="_on_ControlsButton_pressed"]
