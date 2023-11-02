@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Buttons/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/Buttons/ButtonHover.tres" type="StyleBox" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlusSC-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/LevelSelecter.gd" type="Script" id=6]
-[ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=7]
 [ext_resource path="res://assets/Buttons/ButtonDisabled.tres" type="StyleBox" id=8]
 
 [sub_resource type="DynamicFont" id=3]
@@ -24,10 +23,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
 
-[node name="BlueBackground" type="Sprite" parent="."]
-position = Vector2( 512, 300 )
-scale = Vector2( 1.01386, 1.0274 )
-texture = ExtResource( 7 )
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.215686, 0.741176, 0.741176, 1 )
 
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0

@@ -26,8 +26,5 @@ func _on_4_pressed():
 func _on_5_pressed():
 	get_tree().change_scene("res://Levels/Level5.tscn")
 
-
-
-
 func _on_6_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Levels/Level6.tscn")
