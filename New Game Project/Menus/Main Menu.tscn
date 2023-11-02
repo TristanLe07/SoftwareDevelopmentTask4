@@ -73,13 +73,13 @@ align = 1
 valign = 1
 
 [node name="Player(2)" type="Sprite" parent="."]
-position = Vector2( 144, 496 )
+position = Vector2( 176, 496 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 7 )
 script = ExtResource( 9 )
 
 [node name="Enemy(2)" type="Sprite" parent="."]
-position = Vector2( 832, 504 )
+position = Vector2( 896, 512 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 8 )
 script = ExtResource( 10 )
@@ -91,7 +91,7 @@ texture = ExtResource( 8 )
 script = ExtResource( 10 )
 
 [node name="Enemy(2)3" type="Sprite" parent="."]
-position = Vector2( 936, 208 )
+position = Vector2( 896, 208 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
