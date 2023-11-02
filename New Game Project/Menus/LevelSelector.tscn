@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Buttons/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/Buttons/ButtonHover.tres" type="StyleBox" id=2]
@@ -7,16 +7,17 @@
 [ext_resource path="res://Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/LevelSelecter.gd" type="Script" id=6]
 [ext_resource path="res://Random Images/Blue Background.png" type="Texture" id=7]
-
-[sub_resource type="DynamicFont" id=2]
-size = 75
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
+[ext_resource path="res://assets/Buttons/ButtonDisabled.tres" type="StyleBox" id=8]
 
 [sub_resource type="DynamicFont" id=3]
 size = 128
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
@@ -28,72 +29,6 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.01386, 1.0274 )
 texture = ExtResource( 7 )
 
-[node name="Level1" type="Button" parent="."]
-margin_left = 128.0
-margin_top = 192.0
-margin_right = 256.0
-margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "1"
-
-[node name="Level2" type="Button" parent="."]
-margin_left = 448.0
-margin_top = 192.0
-margin_right = 576.0
-margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "2"
-
-[node name="Level3" type="Button" parent="."]
-margin_left = 768.0
-margin_top = 192.0
-margin_right = 896.0
-margin_bottom = 320.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "3"
-
-[node name="Level4" type="Button" parent="."]
-margin_left = 128.0
-margin_top = 384.0
-margin_right = 256.0
-margin_bottom = 512.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "4"
-
-[node name="Level5" type="Button" parent="."]
-margin_left = 448.0
-margin_top = 384.0
-margin_right = 576.0
-margin_bottom = 512.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "5"
-
-[node name="Level6" type="Button" parent="."]
-margin_left = 768.0
-margin_top = 384.0
-margin_right = 896.0
-margin_bottom = 512.0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 3 )
-text = "6"
-
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 192.0
@@ -102,9 +37,91 @@ text = "Levels"
 align = 1
 valign = 1
 
-[connection signal="pressed" from="Level1" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed"]
-[connection signal="pressed" from="Level4" to="." method="_on_Level4_pressed"]
-[connection signal="pressed" from="Level5" to="." method="_on_Level5_pressed"]
-[connection signal="pressed" from="Level6" to="." method="_on_Level6_pressed"]
+[node name="levels" type="GridContainer" parent="."]
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 832.0
+margin_bottom = 513.0
+custom_constants/vseparation = 65
+custom_constants/hseparation = 128
+columns = 3
+
+[node name="1" type="Button" parent="levels"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "1"
+
+[node name="2" type="Button" parent="levels"]
+margin_left = 256.0
+margin_right = 384.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "2"
+
+[node name="3" type="Button" parent="levels"]
+margin_left = 512.0
+margin_right = 640.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "3"
+
+[node name="4" type="Button" parent="levels"]
+margin_top = 193.0
+margin_right = 128.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "4"
+
+[node name="5" type="Button" parent="levels"]
+margin_left = 256.0
+margin_top = 193.0
+margin_right = 384.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "5"
+
+[node name="6" type="Button" parent="levels"]
+margin_left = 512.0
+margin_top = 193.0
+margin_right = 640.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+text = "6"
+
+[connection signal="pressed" from="levels/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="levels/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="levels/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="levels/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="levels/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="levels/6" to="." method="_on_6_pressed"]
