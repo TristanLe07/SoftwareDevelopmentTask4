@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rse.png-64a0bd317473e481068a0020dc8ede28.stex"
+path="res://.import/KingBlob7.png-f122f39ad2a832aa7ac57efdc251f91b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rse.png"
-dest_files=[ "res://.import/rse.png-64a0bd317473e481068a0020dc8ede28.stex" ]
+source_file="res://assets/GroupThinsg/Josh Blob/YES KING/KingBlob7.png"
+dest_files=[ "res://.import/KingBlob7.png-f122f39ad2a832aa7ac57efdc251f91b.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
