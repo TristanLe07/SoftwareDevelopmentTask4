@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/tilemap/TileMap.tres" type="TileSet" id=3]
 [ext_resource path="res://Player/Score.tscn" type="PackedScene" id=5]
 
-[node name="Level2" type="Node2D"]
+[node name="Level5" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -512.0

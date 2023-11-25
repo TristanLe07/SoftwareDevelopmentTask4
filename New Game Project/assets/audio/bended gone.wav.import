@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bended gone.wav-b80c0be64514293d623cdb84e58d694c.sample"
+
+[deps]
+
+source_file="res://assets/audio/bended gone.wav"
+dest_files=[ "res://.import/bended gone.wav-b80c0be64514293d623cdb84e58d694c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

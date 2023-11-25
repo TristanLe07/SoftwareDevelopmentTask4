@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/tilemap/TileMap.tres" type="TileSet" id=3]
 [ext_resource path="res://Player/Score.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -512.0
@@ -27,59 +27,45 @@ position = Vector2( -160, -72 )
 
 [node name="KinematicBody2D" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( -64, -144 )
-health = 3
 
 [node name="KinematicBody2D2" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 264, -120 )
-health = 3
 
 [node name="KinematicBody2D3" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 528, -72 )
-health = 3
 
 [node name="KinematicBody2D4" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 512, 264 )
-health = 3
 
 [node name="KinematicBody2D5" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 512, 264 )
-health = 3
 
 [node name="KinematicBody2D6" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 56, 144 )
-health = 3
 
 [node name="KinematicBody2D7" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 296, 360 )
-health = 3
 
 [node name="KinematicBody2D8" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 488, 408 )
-health = 3
 
 [node name="KinematicBody2D9" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 280, -40 )
-health = 3
 
 [node name="KinematicBody2D10" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( -112, 0 )
-health = 3
 
 [node name="KinematicBody2D11" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( -144, 216 )
-health = 3
 
 [node name="KinematicBody2D12" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 40, 72 )
-health = 3
 
 [node name="KinematicBody2D13" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( -48, 120 )
-health = 3
 
 [node name="KinematicBody2D14" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 264, 64 )
-health = 3
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -160, 288 )
